@@ -1,0 +1,4 @@
+             Scanner scn=new Scanner(System.in);
+             String s ="abcd";
+             System.out.println(s.substring(1,3));
+        }
