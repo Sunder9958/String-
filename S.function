@@ -1,0 +1,51 @@
+             Scanner scn=new Scanner(System.in);
+             String s ="abcd";
+             System.out.println(s.substring(0,2));
+             
+        System.out.println(s.substring(1));  / when we not include the second value so it's print all values apart of 
+give value.
+
+out put
+ab
+bcd
+***************************************
+             StringBuilder sb=new StringBuilder("hello");
+             System.out.println(sb);
+
+             char ch= sb.charAt(0);  //Get
+             System.out.println(ch);
+
+             sb.insert(2,'y'); //inset
+        System.out.println(sb);
+
+        sb.deleteCharAt(2);   //delete
+        System.out.println(sb);
+
+        sb.setCharAt(0,'d');  //update
+        System.out.println(sb);
+
+        sb.append('g');        // append
+        System.out.println(sb);
+
+        System.out.println(sb.length());  //get length of chatacter
+ *************************************************
+ Acci value of character
+     public static String solution(String str){
+        StringBuilder sb=new StringBuilder();
+        sb.append(str.charAt(0));
+
+        for(int i=1;i<str.length();i++){
+            char curr=str.charAt(i);
+            char prev=str.charAt(i-1);
+            int gap=curr-prev;
+            sb.append(gap);
+            sb.append(curr);
+        }
+        return sb.toString();
+    }
+
+    public static void main(String[] s) {
+              Scanner scn=new Scanner(System.in);
+              String str=scn.next();
+              System.out.println(solution(str));
+    }
